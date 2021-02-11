@@ -23,8 +23,9 @@ import { BrowserRouter } from 'react-router-dom';
 // hice el import del router pero no de la misma forma que la app
 import App from "./App";
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
+

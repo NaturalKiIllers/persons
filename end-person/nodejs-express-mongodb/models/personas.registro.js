@@ -1,15 +1,20 @@
 module.exports = mongoose => {
-    const Persona = mongoose.model(
-        "persona",
-        mongoose.Schema(
+    var schema = mongoose.Schema(
             {
+                Rut: String,
                 Nombre: String,
                 Apellido: String,
                 correo: String,
                 estado: Boolean
             },
             {timestamps: true}
-        )
-    );
+        );
+    schema.method("toJSON", function() {
+        const { __v, _id, ...object } = this.toObject();
+        object.id = _id;
+        return object;
+      });
+    
+      const Persona = mongoose.model("persona", schema);
     return Persona;
 };
