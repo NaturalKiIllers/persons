@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 const db = {}
 db.mongoose = mongoose;
 db.url = dbConfig.url;
-db.registros = require("./personas.registro.js")(mongoose);
+db.personas = require("./personas.registro.js")(mongoose);
 
 module.exports = db;
 

@@ -109,7 +109,7 @@ const PersonasList = () => {
                    className="m-3 btn btn-sm btn-danger"
                    onClick={removeAllPersonas}
                 >
-                    Eliminar Todos
+                    Eliminar a Todos
                 </button>
             </div>
             <div className="col-md-6">

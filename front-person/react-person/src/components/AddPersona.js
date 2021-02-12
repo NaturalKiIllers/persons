@@ -4,9 +4,9 @@ import PersonaDataService from '../service/PersonaService';
 const AddPersona = () => {
     const initialPersonaState = {
         id: null,
-        Rut: "",
-        Nombre: "",
-        Apellido: "",
+        rut: "",
+        nombre: "",
+        apellido: "",
         correo: "",
         estado: false
     };
@@ -20,9 +20,9 @@ const AddPersona = () => {
 
     const savePersona = () => {
         var data = {
-            Rut: persona.Rut,
-            Nombre: persona.Nombre,
-            Apellido: persona.Apellido,
+            rut: persona.rut,
+            nombre: persona.nombre,
+            apellido: persona.apellido,
             correo: persona.correo
         };
 
@@ -30,9 +30,9 @@ const AddPersona = () => {
         .then(response => {
             setPersona({
                 id: response.data.id,
-                Rut: response.data.Rut,
-                Nombre: response.data.Nombre,
-                Apellido: response.data.Apellido,
+                rut: response.data.rut,
+                nombre: response.data.nombre,
+                apellido: response.data.apellido,
                 correo: response.data.correo,
                 estado: response.data.estado
             });

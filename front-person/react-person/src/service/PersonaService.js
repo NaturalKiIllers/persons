@@ -29,8 +29,8 @@ import http from "../http-common";
 
     };
 
-    const findByActivo =(estado) => {
-        return http.get(`/personas?estado=${estado}`);
+    const findByRut =(rut) => {
+        return http.get(`/personas?rut=${rut}`);
 
     };
 
@@ -42,5 +42,5 @@ export default {
     update,
     remove,
     removeAll,
-    findByActivo
+    findByRut
 };

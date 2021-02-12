@@ -1,9 +1,9 @@
 module.exports = mongoose => {
     var schema = mongoose.Schema(
             {
-                Rut: String,
-                Nombre: String,
-                Apellido: String,
+                rut: String,
+                nombre: String,
+                apellido: String,
                 correo: String,
                 estado: Boolean
             },

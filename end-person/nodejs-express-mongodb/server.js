@@ -5,10 +5,11 @@ const cors = require("cors");
 // inicializacion de app y de la bd 
 const app = express();
 
-app.use(cors(corsOptions));
+
 var corsOptions ={
     origin: "http://localhost:8081"
 };
+app.use(cors(corsOptions));
 // permite analizar solicitudes de tipo contenido -aplication/json
 app.use(bodyParser.json());
 // permite analizar solicitudes de ciertos tipos de url 

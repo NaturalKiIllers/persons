@@ -10,11 +10,11 @@ exports.create = (req, res) => {
    }
 // Crear un nuevo usuario
    const persona = new Persona({
-       Rut: req.body.rut,
-       Nombre: req.body.nombre,
-       Apellido: req.body.apellido,
+       rut: req.body.rut,
+       nombre: req.body.nombre,
+       apellido: req.body.apellido,
        correo: req.body.correo,
-       estado: req.body.estado
+       estado: req.body.estado ? req.body.estado : false
    });
 // Guardar persona en la base
    persona
@@ -34,7 +34,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     const rut = req.query.rut;
     // preguntar si verdaderamente es necesario el var o se puede ocupar const 
-    var condition = rut ? {rut : { $regex: new RegExp(rut), $options: "i"}}:{};
+    var condition = rut ? { rut: { $regex: new RegExp(rut), $options: "i" } } : {};
     // buscar 
     Persona.find(condition)
     .then(data => {

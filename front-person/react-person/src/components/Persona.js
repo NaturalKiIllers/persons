@@ -4,9 +4,9 @@ import PersonaDataService from "../service/PersonaService";
 const Persona = props => {
     const initialPersonaState = {
         id:null,
-        Rut: "",
-        Nombre: "",
-        Apellido: "",
+        rut: "",
+        nombre: "",
+        apellido: "",
         correo: "",
         estado: false
     };
@@ -39,9 +39,9 @@ const Persona = props => {
     const updateActivo = status => {
         var data = {
             id: currentPersona.id,
-            Rut: currentPersona.Rut,
-            Nombre: currentPersona.Nombre,
-            Apellido: currentPersona.Apellido,
+            rut: currentPersona.rut,
+            nombre: currentPersona.nombre,
+            apellido: currentPersona.apellido,
             correo: currentPersona.correo,
             estado: status
         };
@@ -92,7 +92,7 @@ const Persona = props => {
                     className="form-control"
                     id="rut"
                     name="rut"
-                    value={currentPersona.Rut}
+                    value={currentPersona.rut}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -103,7 +103,7 @@ const Persona = props => {
                     className="form-control"
                     id="nombre"
                     name="nombre"
-                    value={currentPersona.Nombre}
+                    value={currentPersona.nombre}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -114,7 +114,7 @@ const Persona = props => {
                     className="form-control"
                     id="apellido"
                     name="apellido"
-                    value={currentPersona.Apellido}
+                    value={currentPersona.apellido}
                     onChange={handleInputChange}
                   />
                 </div>
@@ -162,7 +162,7 @@ const Persona = props => {
                 className="badge badge-success"
                 onClick={updatePersona}
               >
-                Actulizar!
+                Actulizar
               </button>
               <p>{mensaje}</p>
             </div>
