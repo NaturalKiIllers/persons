@@ -60,16 +60,16 @@ const AddPersona = () => {
                 </div>
             ): (
                 <div>
-                    <div className="from-group">
+                    <div className="form-group">
                         <label htmlFor="rut">Rut</label>
                         <input
                           type="text"
                           className="form-control"
-                          id="title"
+                          id="rut"
                           required
-                          value={persona.Rut}
+                          value={persona.rut}
                           onChange={handleInputChange}
-                          name="title"
+                          name="rut"
                         />
                     </div>
                     
@@ -80,7 +80,7 @@ const AddPersona = () => {
                           className="form-control"
                           id="nombre"
                           required
-                          value={persona.Nombre}
+                          value={persona.nombre}
                           onChange={handleInputChange}
                           name="nombre"
                         />
@@ -93,7 +93,7 @@ const AddPersona = () => {
                           className="form-control"
                           id="apellido"
                           required
-                          value={persona.Apellido}
+                          value={persona.apellido}
                           onChange={handleInputChange}
                           name="apellido"
                         />
@@ -112,8 +112,8 @@ const AddPersona = () => {
                         />
                     </div>
 
-                    <button onClick={savePersona} className="btn btn=success">
-                        Enviar!
+                    <button onClick={savePersona} className="btn btn-success">
+                        Enviar
                     </button>
                 </div>
             )}

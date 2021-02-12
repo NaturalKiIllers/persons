@@ -4,15 +4,15 @@ const Persona = db.personas;
 // crear y guarda una nuevo usuario
 exports.create = (req, res) => {
 //validacion
-   if(!req.body.Rut){
+   if(!req.body.rut){
        res.status(400).send({mensaje: "El Rut no puede estar vacío."});
        return;
    }
 // Crear un nuevo usuario
    const persona = new Persona({
-       Rut: req.body.Rut,
-       Nombre: req.body.Nombre,
-       Apellido: req.body.Apellido,
+       Rut: req.body.rut,
+       Nombre: req.body.nombre,
+       Apellido: req.body.apellido,
        correo: req.body.correo,
        estado: req.body.estado
    });
@@ -117,7 +117,7 @@ exports.deleteAll = (req, res) =>{
     Persona.deleteMany({})
     .then(data => {
         res.send({
-            mensaje: `${data.deleteCount} Personas eliminadas correctamente!`
+            mensaje: `${data.deletedCount} Personas eliminadas correctamente!`
         });
     })
     .catch(err => {

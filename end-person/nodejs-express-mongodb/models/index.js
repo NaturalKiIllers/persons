@@ -1,5 +1,4 @@
 const dbConfig = require("../config/db.config.js");
-console.log(dbConfig.url);
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 

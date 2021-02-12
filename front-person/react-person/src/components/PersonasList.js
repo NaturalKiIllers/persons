@@ -15,7 +15,7 @@ const PersonasList = () => {
       }, []);
 
     const onChangeSearchRut = e => {
-        const searchRuth = e.target.value;
+        const searchRut = e.target.value;
         setSearchRut(searchRut);
     };
 
@@ -67,7 +67,7 @@ const PersonasList = () => {
     //todos las funciones hechas, ahora toca llamarlos 
     return(
         <div className="list row">
-            <div className="cold-md-8">
+            <div className="col-md-8">
                 <div className="input-group mb-3">
                     <input
                         type="text"
@@ -88,19 +88,19 @@ const PersonasList = () => {
                 </div>
             </div>
             <div className="col-md-6">
-                <h4>Lista de Personas :D</h4>
+                <h4>Lista de Personas</h4>
 
                 <ul className="list-group">
                     {personas &&
-                      personas.map((personas, index) => (
+                      personas.map((persona, index) => (
                           <li
                             className={
                                 "list-group-item" + (index === currentIndex ? "active" : "")
                             }
-                            onClick={() => setActivePerson(Persona, index)}
+                            onClick={() => setActivePerson(persona, index)}
                             key={index}
                             >
-                                {Persona.Rut}
+                                {persona.rut}
                             </li>
                       ))}
                 </ul>
@@ -120,19 +120,19 @@ const PersonasList = () => {
                             <label>
                                 <strong>Rut:</strong>
                             </label>{" "}
-                            {currentPersona.Rut}
+                            {currentPersona.rut}
                         </div>
                         <div>
                             <label>
                                 <strong>Nombre:</strong>
                                 </label>{" "}
-                                {currentPersona.Nombre}
+                                {currentPersona.nombre}
                         </div>
                         <div>
                             <label>
                                 <strong>Apellido:</strong>
                                 </label>{" "}
-                                {currentPersona.Apellido}
+                                {currentPersona.apellido}
                         </div>
                         <div>
                             <label>

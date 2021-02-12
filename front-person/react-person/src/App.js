@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <a href="/personas" className="navbar-brand">
-            React-person
+            AFPCapital
           </a>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -23,7 +23,7 @@ class App extends Component {
             </li>
             <li className="nav-item">
               <Link to={"/add"} className="nav-link">
-                Agregar :D
+                Agregar 
               </Link>
             </li>
           </div>
